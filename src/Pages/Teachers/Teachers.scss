@@ -1,0 +1,56 @@
+.teachers{
+    background: url('../../Assets/Image/teacher-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-position: center;
+}
+.teacher__title{
+    text-align: center;
+    font-size: 150px;
+    font-family: 'Dancing Script';
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 200px;
+    color: rgb(53, 5, 53);
+}
+.teachers__container{
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(162, 89, 255, 0)), to(#00fff7));
+
+}
+.teacher__list{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.teacher__item{
+    border: 1px solid #777;
+    border-radius: 20px;
+    width: 400px;
+    text-align: center;
+    padding: 50px 0px;
+    margin-bottom: 50px;
+}
+.teachers__link{
+    background-color: rgb(140, 0, 255);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    border: 1px solid purple;
+    transition: 0.5s ease all;
+}
+.teachers__link:hover {
+    color: purple;
+    background: none;
+    border: 1px solid purple;
+}
+.teachers__link:active {
+    background-color: purple;
+    color: #fff;
+    transition: none;
+}

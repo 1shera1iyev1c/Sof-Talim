@@ -15,7 +15,7 @@ export default function Login() {
   return (
     <>
        <div className='pt-5 pb-5 container wrapper'>
-      <div className="login-box">
+      <div className="mt-5 login-box">
         <h2>Login</h2>
         
           <div className="user-box">
@@ -43,7 +43,7 @@ export default function Login() {
     </div>
 
 
-    <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div className="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div className="modal-dialog">
       <div className="modal-content">
         <div className="modal-header">

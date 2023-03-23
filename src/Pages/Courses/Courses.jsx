@@ -3,8 +3,10 @@ import './Courses.scss'
 
 export default function Courses() {
   return (
-    <div>
-      Courses
+    <div className='courses'>
+      <div className="container">
+        <h2>Courses</h2>
+      </div>
     </div>
   )
 }

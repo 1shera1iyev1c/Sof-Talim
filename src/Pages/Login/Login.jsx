@@ -16,15 +16,15 @@ export default function Login() {
     <>
        <div className='pt-5 pb-5 container wrapper'>
       <div className="mt-5 login-box">
-        <h2>Login</h2>
+        <h2>Ro'yhatdan o'tish</h2>
         
           <div className="user-box">
             <input type="text" />
-            <label>Username</label>
+            <label>Ism & Familiya *</label>
           </div>
           <div className="user-box">
             <input type={showPass ? "text" : "password"} />
-            <label>Password</label>
+            <label>Parol *</label>
             <button className="btn" onClick={() => togglePassShow()}>
             {showPass ? <img src={eye} alt="eye" width={30} /> : <img src={eyeSlash} alt="eye" width={30} />}
           </button>
@@ -34,7 +34,7 @@ export default function Login() {
             <span></span>
             <span></span>
             <span></span>
-            Submit
+            Jo'natish
           </a>
           <button type="button" className="btn pt-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
             <img src={person} width={30} />

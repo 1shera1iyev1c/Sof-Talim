@@ -72,7 +72,7 @@ export default function Teachers() {
     <>
       <div className="teachers">
         <div className="container">
-          <h2 className="teacher__title">Teachers</h2>
+          <h2 className="teacher__title">Ustozlar</h2>
         </div>
       </div>
       <div className="teachers__container pt-5">

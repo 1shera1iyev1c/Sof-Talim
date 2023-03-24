@@ -15,7 +15,7 @@ export default function Footer() {
       </div>
       <ul className='footer__list'>
         <li className="footer__item">
-          <Link className='footer__link h6' to="/">Home</Link>
+          <Link className='footer__link h6' to="/">Asosiy</Link>
           <Link className='footer__link' to="/">O'quv markaz haqida</Link>
           <Link className='footer__link' to="/">Manzil</Link>
         </li>

@@ -12,7 +12,7 @@ export default function Header() {
       </a>
       <ul className='header__list'>
         <li className="header__item">
-          <Link className='header__link' to="/">Home</Link>
+          <Link className='header__link' to="/">Asosiy</Link>
         </li>
         <li className="header__item">
           <Link className='header__link' to="/courses">Kurslar</Link>

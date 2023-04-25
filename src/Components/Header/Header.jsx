@@ -1,9 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../Assets/Image/logo.png";
-import Uzb from "../../Assets/Image/Uzb.png";
-import Eng from "../../Assets/Image/Eng.png";
-import Rus from "../../Assets/Image/Rus.webp";
 import "./Header.scss";
 import { ThemeContext } from "../../Context/theme-context";
 import { LangContext } from "../../Context/lang-context";
@@ -68,15 +65,12 @@ export default function Header() {
           >
             <option className="d-flex" value="eng">
               Eng
-              <img src={Eng} alt="eng" width={20} />
             </option>
             <option className="d-flex" value="uzb">
               Uzb
-              <img src={Uzb} alt="uzb" width={20} />
             </option>
             <option className="d-flex" value="rus">
               Rus
-              <img src={Rus} alt="eng" width={20} />
             </option>
           </select>
         </div>

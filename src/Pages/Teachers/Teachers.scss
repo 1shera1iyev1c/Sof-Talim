@@ -1,5 +1,13 @@
-.teachers{
+.teachers__light{
     background: url('../../Assets/Image/teacher-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-position: center;
+}
+.teachers__dark{
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../Assets/Image/teacher-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 100px;
@@ -15,8 +23,12 @@
     margin-left: 200px;
     color: rgb(53, 5, 53);
 }
-.teachers__container{
+.teachers__container--light{
     background: -webkit-gradient(linear, left bottom, left top, from(rgba(162, 89, 255, 0)), to(#00fff7));
+
+}
+.teachers__container--dark{
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(162, 89, 255, 0)), to(#0064e8));
 
 }
 .teacher__list{
@@ -54,4 +66,7 @@
     background-color: purple;
     color: #fff;
     transition: none;
+}
+.fonts{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }

@@ -1,68 +1,72 @@
-import React, { useState } from 'react'
-import './Login.scss'
-import eye from '../../Assets/Image/eye-fill.svg'
-import eyeSlash from '../../Assets/Image/eye-slash-fill.svg'
-import person from '../../Assets/Image/person-fill.svg'
+import React, { useState } from "react";
+import "./Login.scss";
+import eye from "../../Assets/Image/eye-fill.svg";
+import eyeSlash from "../../Assets/Image/eye-slash-fill.svg";
+import person from "../../Assets/Image/person-fill.svg";
+import { ThemeContext } from "../../Context/theme-context";
+import { LangContext } from "../../Context/lang-context";
+import { useContext } from "react";
+import { Language } from "../../Assets/Language/Langugage";
 
 export default function Login() {
 
+  const { theme } = useContext(ThemeContext);
+  const { lang } = useContext(LangContext);
+
   const [showPass, setShowPass] = useState(false);
+  const [login, setLogin] = useState();
+  const [parol, setParol] = useState();
 
   const togglePassShow = () => {
     setShowPass(!showPass);
   };
+  const handleLogin = (e) => {
+    setLogin(e.target.value);
+  };
+  const handleParol = (e) => {
+    setParol(e.target.value);
+  };
+  const changePage = () => {
+    if (login == "admin" && parol == 54321) {
+      window.location.replace("/home");
+    } else {
+      alert("Login yoki parolingiz xato!");
+    }
+  };
 
   return (
-    <>
-       <div className='pt-5 pb-5 container wrapper'>
-      <div className="mt-5 login-box">
-        <h2>Ro'yhatdan o'tish</h2>
-        
+    <div className={`login__${theme}`}>
+      <div className="pt-5 pb-5 container wrapper">
+        <div className={`mt-5 login-box login-box__${theme}`}>
+          <h2>{Language[lang].login.Royhat}</h2>
+
           <div className="user-box">
-            <input type="text" />
-            <label>Ism & Familiya *</label>
+            <input type="text" onChange={handleLogin} />
+            <label>{Language[lang].login.Login} *</label>
           </div>
           <div className="user-box">
-            <input type={showPass ? "text" : "password"} />
-            <label>Parol *</label>
+            <input
+              onChange={handleParol}
+              type={showPass ? "text" : "password"}
+            />
+            <label>{Language[lang].login.Parol} *</label>
             <button className="btn" onClick={() => togglePassShow()}>
-            {showPass ? <img src={eye} alt="eye" width={30} /> : <img src={eyeSlash} alt="eye" width={30} />}
-          </button>
-          </div>  
-          <a href="#">
+              {showPass ? (
+                <img src={eye} alt="eye" width={30} />
+              ) : (
+                <img src={eyeSlash} alt="eye" width={30} />
+              )}
+            </button>
+          </div>
+          <a onClick={changePage} href="#">
             <span></span>
             <span></span>
             <span></span>
             <span></span>
-            Jo'natish
+            {Language[lang].login.Jonat}
           </a>
-          <button type="button" className="btn pt-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            <img src={person} width={30} />
-          </button>
-      </div>
-    </div>
-
-
-    <div className="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div className="modal-dialog">
-      <div className="modal-content">
-        <div className="modal-header">
-          <h1 className="modal-title fs-5" id="exampleModalLabel">Admins</h1>
-          <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div className="modal-body">
-          Team Leader : <a className='text-decoration-none' href="https://t.me/Sanjar_57_27">Sanjar</a> <br />
-          Super Admin : <a className='text-decoration-none' href="https://t.me/zokirjon_komilov">Zokirjon</a> <br />
-          Super Admin : <a className='text-decoration-none' href="https://t.me/1sheraliyev1c">Odilbek</a> <br />
-          Super Admin : <a className='text-decoration-none' href="https://t.me/Sof_talim_admin">Sof Ta'lim Admin</a>
-        </div>
-        <div className="modal-footer">
-          <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" className="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>
-  </div>
-    </>
-  )
+  );
 }

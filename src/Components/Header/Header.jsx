@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../Assets/Image/logo.png";
 import "./Header.scss";
-import logo from '../../Assets/Image/logo.png'
 import { ThemeContext } from "../../Context/theme-context";
 import { LangContext } from "../../Context/lang-context";
 import { useContext } from "react";

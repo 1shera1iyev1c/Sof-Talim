@@ -1,10 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../Assets/Image/logo.png";
-import Uzb from "../../Assets/Image/Uzb.png";
-import Eng from "../../Assets/Image/Eng.png";
-import Rus from "../../Assets/Image/Rus.webp";
 import "./Header.scss";
+import logo from '../../Assets/Image/logo.png'
 import { ThemeContext } from "../../Context/theme-context";
 import { LangContext } from "../../Context/lang-context";
 import { useContext } from "react";
@@ -27,7 +24,7 @@ export default function Header() {
   return (
     <header className={`header__${theme}`}>
       <div className="container header__container">
-        <a href="#" className={`header__logo--${theme}`}>
+        <a href="#" >
           <img src={logo} alt="logo" width={200} height={100} />
         </a>
         <ul className="header__list">
@@ -66,17 +63,14 @@ export default function Header() {
             onChange={handleLang}
             defaultValue={lang}
           >
-            <option className="d-flex" value="eng">
+            <option value="eng">
               Eng
-              <img src={Eng} alt="eng" width={20} />
             </option>
-            <option className="d-flex" value="uzb">
+            <option value="uzb">
               Uzb
-              <img src={Uzb} alt="uzb" width={20} />
             </option>
-            <option className="d-flex" value="rus">
+            <option value="rus">
               Rus
-              <img src={Rus} alt="eng" width={20} />
             </option>
           </select>
         </div>
